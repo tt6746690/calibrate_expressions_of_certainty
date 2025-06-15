@@ -17,7 +17,7 @@ This framework not only supports more reliable communication in clinical setting
 
 
 
-# Quick Start
+# Quick Install
 
 
 ```sh
