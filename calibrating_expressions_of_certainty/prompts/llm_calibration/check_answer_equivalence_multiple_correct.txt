@@ -1,0 +1,12 @@
+Given a question and a list of correct answers, is the answer (after "Answer: ") semantically equivalent to any of the correct answers?
+
+Question:
+{question}
+
+Correct Answers:
+{gold_answer}
+
+Answer:
+{pred_answer}
+
+Please explain your reasoning concisely first, then in the last line answer with a single word, either "Yes." or "No."

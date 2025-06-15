@@ -1,0 +1,25 @@
+**Act as an expert radiologist and extract common pathologies from radiology reports in a structured format.**
+
+**Input:** Each report will be provided as a single string.
+
+**Output:** For each report, provide a list of findings in the following format:
+
+* **Sentence:** The exact sentence from the report that most suggests the presence of the pathology (in double quotes).
+* **Pathology:** The identified pathology name (e.g., "atelectasis", "aspiration", "pneumonia", "pulmonary edema", "pleural effusion", "pneumothorax", "fibrosis").
+* **Confidence Level:** The likelihood of the pathology being present (e.g., "absent", "possible", "may", "likely", "present").
+
+
+**Examples:**
+{% for example in examples %}
+##### REPORT:
+{{ example.report }}
+{% if example.pathologies %}
+##### ANSWER:
+{%- for pathology in example.pathologies %}
+- "{{ pathology.reference }}", "{{ pathology.pathology }}", "{{ pathology.confidence }}"
+{%- endfor %}
+#####
+{%- else %}
+##### ANSWER:
+{%- endif %}
+{% endfor %}

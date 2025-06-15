@@ -1,0 +1,6 @@
+What are some linguistic expressions of certainty and uncertainty (e.g., "Maybe", "Highly Likely") that are commonly used by you?
+Just output a list of 8 phrases and the Beta distribution parameters (that must be positive numbers) that correpond to each phrase.
+Don't explain your reasoning.
+
+Example:
+- <phrase, wrap in double quotes and don't bold>, <alpha>, <beta>

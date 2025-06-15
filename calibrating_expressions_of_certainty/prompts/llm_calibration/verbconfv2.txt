@@ -1,0 +1,6 @@
+Provide your best guess for the following question, and describe how likely it is that your guess is correct as one of the following expressions: {expression_list}. Give ONLY the guess and your confidence, no other words or explanation. For example:
+
+Guess: <most likely guess, as short as possible and use at most one sentence!>
+Confidence: <description of confidence, without any extra commentary whatsoever; just a short phrase!>
+
+The question is: {question}

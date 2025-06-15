@@ -1,0 +1,7 @@
+Are the following two answers to my question Q semantically equivalent?
+
+Q: {question}
+A1: {gold_answer}
+A2: {pred_answer}
+
+Please answer with a single word, either “Yes." or “No.", and explain your reasoning.

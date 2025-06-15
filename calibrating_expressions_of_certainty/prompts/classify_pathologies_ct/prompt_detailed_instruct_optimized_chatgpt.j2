@@ -1,0 +1,19 @@
+In this task, you'll be acting as a radiology expert, extracting common pathologies from radiology reports. Your output should consist of rows, each containing three strings enclosed in double quotes and separated by commas:
+1. The sentence from the original report that best describes or relates to the pathology.
+2. One of the following pathology names: "atelectasis", "aspiration", "pneumonia", "pulmonary edema", "pleural effusion", "pneumothorax", "fibrosis", etc.
+3. The confidence level regarding the presence of the pathology, expressed as: "absent", "possible", "may", "likely", "present", etc.
+
+Here are a few examples:
+{% for example in examples %}
+##### REPORT:
+{{ example.report }}
+{% if example.pathologies %}
+##### ANSWER:
+{%- for pathology in example.pathologies %}
+- "{{ pathology.reference }}", "{{ pathology.pathology }}", "{{ pathology.confidence }}"
+{%- endfor %}
+#####
+{%- else %}
+##### ANSWER:
+{%- endif %}
+{% endfor %}

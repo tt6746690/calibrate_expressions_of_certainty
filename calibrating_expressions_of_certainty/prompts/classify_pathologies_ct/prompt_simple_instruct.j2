@@ -1,0 +1,16 @@
+Act as an expert radiologist, extract common pathologies from radiology reports.
+
+Here are a few examples:
+{% for example in examples %}
+##### REPORT:
+{{ example.report }}
+{% if example.pathologies %}
+##### ANSWER:
+{%- for pathology in example.pathologies %}
+- "{{ pathology.reference }}", "{{ pathology.pathology }}", "{{ pathology.confidence }}"
+{%- endfor %}
+#####
+{%- else %}
+##### ANSWER:
+{%- endif %}
+{% endfor %}

@@ -1,0 +1,24 @@
+Act as an expert radiologist, extract common pathologies from radiology reports as follows.
+
+Each row contains EXACTLY two strings in double quotes separated by comma:
+1. one pathology name, such as "atelectasis", "aspiration", "pneumonia", "pulmonary edema".
+2. the confidence that the pathology is present, such as "likely", "possible", "may be", "absent", "present".
+
+Avoid any explanation other than outputing 2 strings per row! For example, NO brackets with explanations.
+Find ALL the relevant pathologies while make sure that no two rows represent the same pathology.
+
+Here are a few examples:
+
+{% for example in examples %}
+##### REPORT:
+{{ example.report }}
+{% if example.pathologies %}
+##### ANSWER:
+{%- for pathology in example.pathologies %}
+"{{ pathology.pathology }}", "{{ pathology.confidence }}"
+{%- endfor %}
+#####
+{%- else %}
+##### ANSWER:
+{%- endif %}
+{% endfor %}
