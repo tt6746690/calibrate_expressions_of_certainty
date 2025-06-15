@@ -42,9 +42,13 @@ pip install -e .
 
 # Tutorial
 
-Once you've set up the codebase and environment, we recommend going through the code in [tutorial.ipynb](https://github.com/tt6746690/calibrate_expressions_of_certainty/tutorial.ipynb). It walks through how to:
+Once you've set up the codebase and environment, we recommend going through the code in [tutorial.ipynb](https://github.com/tt6746690/calibrate_expressions_of_certainty/blob/main/tutorial.ipynb). It walks through how to:
 - Measure the calibration of GPT-4o when it expresses confidence using natural language—e.g., phrases like "likely" or "possibly"—in response to questions from TruthfulQA.
 - Improve GPT-4o’s calibration by adjusting its use of these certainty phrases.
+
+By following the tutorial, you’ll gain a clearer understanding of the codebase and learn how to visualize model calibration using reliability diagrams, as well as interpret the resulting calibration map, as shown below:
+
+![](assets/calibrate_ot_llm_gpt4o_verbconf_truthfulqa.png)
 
 
 # Citation
